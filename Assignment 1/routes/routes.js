@@ -30,7 +30,7 @@ function requestHandler(req, res)
         user = "";
         req.on('data', (chunk) => {
             body.push(chunk)
-            user = parser.parser(body);
+            parser.parser(body);
         })
         res.write('<html>');
         res.write('<head><title>POST</title><head>');
